@@ -1,0 +1,230 @@
+.vido-main {
+position: relative;
+display: flex;
+flex-direction: column;
+margin-left: -100px;
+width: auto ;
+width: 10000px;
+
+}
+.videos-div {
+    position: relative;
+}
+video {
+    object-fit: cover;
+    width: 100%;
+    border-radius: 25px;
+}
+.Details {
+    display: grid;
+    grid-template-rows: 40px;
+}
+.title-div {
+    font-weight: bolder;
+    font-size: 20px;
+    margin-top: 13px;
+}
+.Subscriptions-likes-dislikes-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.Subscriptions-buttons-Div{
+    display: flex;
+    align-items: center;
+}
+.Subscriptions-buttons-Div p {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+.amountofsubscribers {
+    font-size: 10px;
+}
+.chekmarkandthumnail{
+    display: flex;
+    align-items: center;
+}
+.chekmark {
+
+    display: flex;
+    align-self: baseline;
+    align-items: center;
+    justify-content: center;
+    margin-left: 5px    ;
+    padding-top:  1px;
+    padding-left: 1px;
+    background-color: gray;
+    height: 12px;
+    width: 12px;
+    font-size: 10px;
+    color: white;
+    border-radius: 7px;
+    
+}
+.current-profilepic {
+    width: 40px;
+    border-radius: 25px;
+    object-fit: cover;
+    margin-right: 12px;
+}
+.SUBSCRIBE-button {
+    margin-left: 30px;
+    border: none;
+    border-radius: 25px;
+    height: 30px;
+    background-color: black;
+    color: white;
+}
+.SUBSCRIBE-button:hover {
+    background-color: rgb(49, 49, 49);
+}
+.like ,
+.dislike ,
+.likes {
+    border: none;
+    width: 90px;
+    border-radius: 20px;
+    height: 35px;
+
+}
+.like:hover ,
+.dislike:hover ,
+.likes:hover  {
+    background-color: rgb(209, 209, 209);
+}
+.like {
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-right: solid;
+}
+.dislike {
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
+    margin-left: -10px;
+    border-left: solid;
+    border-width: 1px;
+    border-color: rgb(181, 181, 181);
+}
+
+
+
+
+
+
+
+.more-details-div {
+    display: grid;
+    background-color: rgb(234, 232, 232);
+
+}
+.more-details-div:not(:hover) {
+    height: 70px;
+    
+}
+.invisible-down {
+    height: 20px;
+}
+.invisible-down:hover {
+    height: auto;
+}
+.more-details-div p {
+    
+    visibility: hidden;
+    display: block;
+    font: none;
+    font-size: 0px;
+    width: 0px;
+    height: 0px;
+
+}
+.more-details-div:hover p {
+    visibility:visible;
+    font-size: small;
+    width: auto;
+    height: auto;
+}
+.Big-text {
+    font-size: medium;
+    font-weight: bold;
+    margin: 5px;
+}
+.little-text{
+    font-size: small;
+    margin: 5px;
+}
+.yourcomment {
+    display: flex;
+}
+.yourcomment p {
+    padding-right: 610px;
+    color: rgb(133, 133, 133);
+    margin-top: 5px;
+    margin-left: 10px;
+    border-bottom: solid;
+    border-width: 1px;
+}
+.yourcommentprofilepic {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.one-single-comment {
+    display: flex;
+    align-items: center;
+    background-color: rgb(206, 203, 203);
+    margin-top: 40px;
+}
+.comenter {
+    font-size: 12px;
+}
+.one-single-comment img {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+}
+.one-single-comment p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.comenter-profileppic {
+    display: flex;
+}
+.upofthecomment {
+    display: flex;
+}
+.whenwasitsend {
+    margin-left: 5px;
+    font-size: 12px;
+    color: rgb(84, 83, 83);
+}
+.THE-comment {
+    
+}
+.comments-buttons {
+    display: flex;
+}
+.comments-buttons button {
+    transition: background 0.5s;
+}
+.like-and-dislike {
+    width: auto;
+    height: 29px;
+    border-radius: 16px;
+    border: none;
+}
+.like-and-dislike:hover {
+    background-color:rgb(208, 208, 208);
+}
+.Cevab-ver-button {
+    display: inline;
+    width: auto;
+    height: 29px;
+    border-radius: 16px;
+    border: none;
+}
+.Cevab-ver-button:hover {
+    background-color:rgb(208, 208, 208);
+}   

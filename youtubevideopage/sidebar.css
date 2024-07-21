@@ -1,0 +1,56 @@
+.Sidebar {
+    position: fixed;
+    display: block;
+    display: flex;
+    flex-direction: column;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    width: 240px;
+    background-color: white ;
+    z-index: 2;
+    grid-column: 0px;
+
+    
+}
+
+.Sidebar:not(:hover) {
+    background-color: white;
+    width: 50px;
+    
+}
+.Sidebar:not(:hover) a ,
+.Sidebar:not(:hover) div ,
+.Sidebar:not(:hover) p {
+    visibility: hidden;
+}
+
+.Sidebar img {
+    height: 20px;
+}
+
+.align-special {
+    
+    display: flex;
+    align-items: center;
+    
+}
+.align-special img {
+    margin: 10px;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    margin-left: 10px;
+}
+.align:hover{
+    cursor: pointer;
+    background-color: rgb(233, 231, 231);
+    border-radius: 10px;
+}
+.align img {
+    margin: 0px;
+}

@@ -1,0 +1,35 @@
+.main {
+    display: grid ; 
+    grid-template-columns: 1fr 1fr 1fr  1fr; 
+    column-gap: 11px;
+    row-gap: 40px;    
+}
+p {
+    
+}
+.one-video-div {
+     
+}
+.tthumnls {
+    position: relative;
+
+}
+.the-video {
+    width: 100% ;
+
+}
+.all-else-div {
+    display: grid;
+    grid-template-columns: 50px 1fr;
+    
+}
+.video-stats-div {
+    
+}
+.profilepicdiv {
+    
+}
+.profilepic {
+    border-radius: 20px;
+    width: 40px;
+}

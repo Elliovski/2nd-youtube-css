@@ -1,0 +1,25 @@
+.sidebar {
+    position: fixed;
+    top: -15px;
+    bottom: 0px;
+    left: 0px;
+    z-index: 3;
+    width: 80px;
+    margin-top: 80px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.sidebar img {
+    width: 25px;
+    margin-top: 35px;
+}
+.sidebar p {
+    margin: 0px;
+    font-size: 10px;
+    font-family: Arial;
+    font-weight: 400px;
+    margin-top: 5px;
+}
