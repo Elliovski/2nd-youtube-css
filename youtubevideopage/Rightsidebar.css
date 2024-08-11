@@ -41,6 +41,8 @@
 
 }
 .one-NEXTviedo-div {
+    text-decoration: none;
+    cursor: pointer;
     display: flex;
     margin-bottom: 0px;
     border-radius: 45px ;
@@ -61,6 +63,7 @@
 
 }
 .title {
+    color: black;
     display: flex;
     width: 1fr;
 }

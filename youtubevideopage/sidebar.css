@@ -14,17 +14,42 @@
     
 }
 
-.Sidebar:not(:hover) {
+.Sidebar {
     background-color: white;
-    width: 50px;
+    width: 0px;
+    z-index: 1;
+    transition: width 0.1s;
     
 }
-.Sidebar:not(:hover) a ,
-.Sidebar:not(:hover) div ,
-.Sidebar:not(:hover) p {
+
+.Sidebar-wide {
+    width: 250px;
+    transition: width 0.1s;
+}
+
+.invisible-sidebar a ,
+.invisible-sidebar div ,
+.invisible-sidebar p,
+.invisible-sidebar img
+ {
+    
+    padding-right: 40px;
     visibility: hidden;
 }
 
+.sidebar-visibile a,
+.sidebar-visibile div,
+.sidebar-visibile p,
+.sidebar-visibile img
+{
+    visibility: visible;
+}
+
+youtube-logo ,
+hamnurger-icon
+{
+visibility: visible;
+}
 .Sidebar img {
     height: 20px;
 }

@@ -1,23 +1,32 @@
 import { allVideoData } from "../../data/allVideoData.js";
+import { wantedVideo , findWantedVideo } from "../../youtube2nd javascript/generateVideos.js";
 
-export function renderVideoAndComment (){
+export let requestedVideo = findWantedVideo(wantedVideo.id)
+
+console.log(requestedVideo.videoImage)
+
+console.log(`<img src="thumbnails/${requestedVideo.videoImage}" alt="">`)
+
+
+export function renderVideoAndComment (requestedVideo){
     let html = `
                                 <div class="videos-div">
                                <!-- <video src="videos/Night Drive - A Chillwave Mix.mp4" controls></video> -->
-                                <img src="thumbnails/thumbnail-1.webp" alt="">
+                            <img src="${requestedVideo.videoImage}">
+                            
     
                                 
                             </div>
                             <DIV class="Details">
                                 <DIv class="title-div">
-                                    Night Drive - A Chillwave Mix
+                                    ${requestedVideo.videoTitle}
                                 </DIv>
                                 <DIv class="Subscriptions-likes-dislikes-div">
                                     <div class="Subscriptions-buttons-Div">
                                         <img src="profile pics/channels4_profile.jpg" alt="" class="current-profilepic">
                                         <div>
                                         <div class="chekmarkandthumnail">
-                                            <p>Odysseus</p>
+                                            <p>${requestedVideo.youtuberName}</p>
                                             <p class="chekmark">&#10003;</p>
                                         </div>
                                             <p class="amountofsubscribers">236K abunəçi</p>
@@ -38,7 +47,7 @@ export function renderVideoAndComment (){
                                 </Div>
                                 <Div class="more-details-div">
                                     <div class="visible-up">
-                                        <div class="Big-text">4,9 mln baxiş 5 il öncə</div>
+                                        <div class="Big-text">${requestedVideo.watchData}</div>
                                         <div class="little-text">Art by me</div>
                                         
                                     </div>
@@ -219,6 +228,27 @@ export function renderVideoAndComment (){
 
     `
 
+    
     document.querySelector('.vido-main').innerHTML = html;
 
+    function moreDetailsVisibility (){
+        if (document.querySelector('.invisible-down').classList.contains('visible')){
+            document.querySelector('.invisible-down').classList.remove('visible')
+            document.querySelector('.more-details-div').classList.remove('visible-more-details')
+        }
+        else {
+        document.querySelector('.invisible-down').classList.add('visible')
+        document.querySelector('.more-details-div').classList.add('visible-more-details')
+        
+    }}
+    document.querySelector('.invisible-down').addEventListener('click' , () => {
+        moreDetailsVisibility()
+    })
+    document.querySelector('.visible-up').addEventListener('click' , () => {
+        moreDetailsVisibility()
+    })
+    
 }
+
+
+//document.querySelector('.vido-main').innerHTML = renderVideoAndComment()
