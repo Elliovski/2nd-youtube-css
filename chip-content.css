@@ -5,6 +5,8 @@
     height: 30px;
 }
 .one-chip-content {
+    cursor: pointer;
+
     align-items: center;
     display:flex;
     width: min-content;
@@ -15,6 +17,11 @@
     color: black;
     background-color: rgb(232, 232, 232);
 }
+.one-chip-content:hover{
+    background-color: rgb(204, 197, 197);
+    transition: background-color 0.3s;
+}
+
 .one-chip-content p {
     
     width: min-content;

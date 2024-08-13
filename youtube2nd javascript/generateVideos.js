@@ -23,7 +23,8 @@ export function saveToStorage (){
 }
 saveToStorage()
 
-export function renderVideos(){
+
+export function renderVideos(allVideoData){
     let html = ``
 
     allVideoData.forEach((videoData) => {
