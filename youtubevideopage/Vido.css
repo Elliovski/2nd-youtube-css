@@ -84,6 +84,15 @@ video {
 .SUBSCRIBE-button:hover {
     background-color: rgb(49, 49, 49);
 }
+.ActiveSubscribeButton {
+    background-color: rgb(226, 226, 226);
+    color: black;
+    
+    font-weight: 220px;
+}
+.ActiveSubscribeButton:hover {
+    background-color: rgb(212, 209, 209);
+}
 .like ,
 .dislike ,
 .likes {

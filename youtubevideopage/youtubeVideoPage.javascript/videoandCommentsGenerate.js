@@ -1,11 +1,9 @@
 import { allVideoData } from "../../data/allVideoData.js";
+import { ClassAdderAndRemoverFunction } from "../../WidelyUsedFunctions/classFunctions.js";
+import {SubscribedAddList , addToSubscribedYoutubers } from "../../WidelyUsedFunctions/listFunctions.js";
 import { wantedVideo , findWantedVideo } from "../../youtube2nd javascript/generateVideos.js";
 
 export let requestedVideo = findWantedVideo(wantedVideo.id)
-
-console.log(requestedVideo.videoImage)
-
-console.log(`<img src="thumbnails/${requestedVideo.videoImage}" alt="">`)
 
 
 export function renderVideoAndComment (requestedVideo){
@@ -31,7 +29,7 @@ export function renderVideoAndComment (requestedVideo){
                                         </div>
                                             <p class="amountofsubscribers">236K abunəçi</p>
                                         </div>
-                                        <button class="SUBSCRIBE-button">SUBSCRIBE!</button>
+                                        <button class="SUBSCRIBE-button">Subscribe!</button>
                                     
                                         
                                     </div>
@@ -246,6 +244,25 @@ export function renderVideoAndComment (requestedVideo){
     })
     document.querySelector('.visible-up').addEventListener('click' , () => {
         moreDetailsVisibility()
+    })
+    document.querySelector('.SUBSCRIBE-button').addEventListener('click' , () => {
+
+        ClassAdderAndRemoverFunction('.SUBSCRIBE-button' , 'ActiveSubscribeButton' , 'youtuberName')
+        
+        if (document.querySelector('.SUBSCRIBE-button').classList.contains('ActiveSubscribeButton')){
+            document.querySelector('.SUBSCRIBE-button').innerHTML = 'Subscribed'
+            let newList = SubscribedAddList(requestedVideo.youtuberName , allVideoData)
+            addToSubscribedYoutubers(requestedVideo.youtuberName)
+            console.log(newList)
+            
+        }
+        else {
+            document.querySelector('.SUBSCRIBE-button').innerHTML = 'Subscribe!'
+
+
+        }
+
+
     })
     
 }
