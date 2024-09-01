@@ -12,7 +12,7 @@ import { genereateChipContent } from "../youtube2nd javascript/genereateChipCont
 */
 
 
-genereateChipContent()
+//genereateChipContent()
 sideBarFunction()
 console.log(SubscribedYoutuberVideoList)
 renderVideos(SubscribedYoutuberVideoList)
