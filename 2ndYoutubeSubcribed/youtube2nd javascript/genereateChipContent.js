@@ -52,26 +52,30 @@ export function genereateChipContent (){
 
         document.querySelectorAll('.one-chip-content').forEach((oneChip) => {
             oneChip.addEventListener('click', () => {
+                let wantedContent = String(oneChip.id)
+                let wantedText = document.getElementById(oneChip.itemid)
+                console.log(wantedContent)
                 let wantedList = []
-
-                if (oneChip.id === "Hamisi"){
-                    allVideoData.forEach((videoData) => {
-                        wantedList.push(videoData)
-                    })
-                }
-                else {
-                    let wantedContent = String(oneChip.id)
+                allVideoData.forEach((videoData) =>{
+                    console.log(videoData.chipContent)
+                    console.log('wanted Content Below')
                     console.log(wantedContent)
-                    allVideoData.forEach((videoData) =>{
-                    
-                        if (String(videoData.chipContent) === String(wantedContent)){
+                    if (String(videoData.chipContent) === String(wantedContent)){
 
-                            wantedList.push(videoData)
+                        console.log('working')
+                        console.log(videoData.chipContent)
 
-                        }
-                    })
-                }
-                renderVideos(wantedList)
+
+                        wantedList.push(videoData)
+
+                    }
+                    renderVideos(wantedList)
+                })
+
             })
+
         })
+
+
+
     }

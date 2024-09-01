@@ -1,6 +1,6 @@
 import { allVideoData } from "../../data/allVideoData.js";
 import { ClassAdderAndRemoverFunction } from "../../WidelyUsedFunctions/classFunctions.js";
-import {SubscribedAddList , addToSubscribedYoutubers } from "../../WidelyUsedFunctions/listFunctions.js";
+import {SubscribedAddList , addToSubscribedYoutubers, RemoveToSubscribedYoutubers  } from "../../WidelyUsedFunctions/listFunctions.js";
 import { wantedVideo , findWantedVideo } from "../../youtube2nd javascript/generateVideos.js";
 
 export let requestedVideo = findWantedVideo(wantedVideo.id)
@@ -251,13 +251,16 @@ export function renderVideoAndComment (requestedVideo){
         
         if (document.querySelector('.SUBSCRIBE-button').classList.contains('ActiveSubscribeButton')){
             document.querySelector('.SUBSCRIBE-button').innerHTML = 'Subscribed'
-            let newList = SubscribedAddList(requestedVideo.youtuberName , allVideoData)
             addToSubscribedYoutubers(requestedVideo.youtuberName)
+            let newList = SubscribedAddList(requestedVideo.youtuberName , allVideoData)
             console.log(newList)
             
         }
         else {
             document.querySelector('.SUBSCRIBE-button').innerHTML = 'Subscribe!'
+            RemoveToSubscribedYoutubers(requestedVideo.youtuberName , allVideoData)
+            let newListremove = SubscribedAddList(requestedVideo.youtuberName , allVideoData)
+            console.log(newListremove)
 
 
         }

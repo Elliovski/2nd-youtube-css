@@ -1,0 +1,33 @@
+.chip-content-all{
+    margin-top: -15px;
+    margin-bottom: 30px;
+    display: flex;
+    height: 30px;
+}
+.one-chip-content {
+    cursor: pointer;
+
+    align-items: center;
+    display:flex;
+    width: min-content;
+    grid-template-columns: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+    color: black;
+    background-color: rgb(232, 232, 232);
+}
+.one-chip-content:hover{
+    background-color: rgb(204, 197, 197);
+    transition: background-color 0.3s;
+}
+
+.one-chip-content p {
+    
+    width: min-content;
+    margin: 0px;
+}
+.active-chip-content {
+    background-color: black;
+    color: white;
+}

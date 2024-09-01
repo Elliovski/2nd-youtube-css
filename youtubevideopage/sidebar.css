@@ -42,8 +42,11 @@
 .sidebar-visibile p,
 .sidebar-visibile img
 {
+    
     visibility: visible;
 }
+
+
 
 youtube-logo ,
 hamnurger-icon
@@ -78,4 +81,7 @@ visibility: visible;
 }
 .align img {
     margin: 0px;
+}
+.align a {
+    padding: 0px;
 }

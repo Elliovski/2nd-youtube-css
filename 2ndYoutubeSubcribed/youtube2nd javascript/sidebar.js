@@ -18,8 +18,4 @@ export function sideBarFunction (){
         sidebarVidibilityFunction()
     })
 
-    /*document.querySelector('.Subscriptions-icon').addEventListener('click', () => {
-        location.replace('2ndYoutubeSubcribed/2nd youtubeSubcribed.html')
-    
-    })*/
 }

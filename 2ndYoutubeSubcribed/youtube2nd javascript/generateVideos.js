@@ -26,10 +26,10 @@ saveToStorage()
 
 export function renderVideos(allVideoData){
     let html = ``
-
+                                                                                                        ///youtubevideopage/youtubevideopage.html
     allVideoData.forEach((videoData) => {
-        html += `<a class="one-video-div js-one-video-div-${videoData.videoId}" id = "${videoData.videoId}"  href="/youtubevideopage/youtubevideopage.html" target="_blank" >
-                    <DIv class="the-video-div">
+        html += `<a class="one-video-div js-one-video-div-${videoData.videoId}" id = "${videoData.videoId}"  href="/youtubevideopage/youtubevideopage.html"  target="_blank" >
+                    <DIv class="the-video-div">                                                                     
                         <img src="${videoData.videoImage}" alt="" class="the-video">
         
                     </DIv>
