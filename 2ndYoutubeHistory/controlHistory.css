@@ -1,0 +1,82 @@
+.Baxis-Tarixcesi-Div {
+    
+    width: 100%;
+}
+
+.Control-HIstory-DIV {
+    
+    width: 355px;
+    margin-left: 9vw;
+    position: relative;
+}
+.positionFixed-History {
+    position: fixed;
+    width: 300px;
+    height: 40px;
+    z-index: 2;
+}
+.searchHistoryDIv {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    padding-bottom: 5px;
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: rgb(110, 110, 110);
+}
+.searchHistoryDIv input{
+    border: none;
+}
+
+
+.searchHistoryDIv img{
+    align-self: center;
+    height: 30px;
+    padding: 5px;
+    border-radius: 17.5px;
+    margin-left: 0px;
+    margin-right: 5px;
+}
+.searchHistoryDIv img:hover {
+    background-color: rgb(226, 226, 226);
+
+}
+.controlHistoryDIv,
+.stopHistoryDIv,
+.deleteHistoryDIv {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    padding-left: 10px;
+    width: 100%;
+
+    height: 37px;
+    border-radius: 19px;
+    
+
+}
+.controlHistoryDIv:hover,
+.stopHistoryDIv:hover,
+.deleteHistoryDIv:hover{ 
+    background-color: rgb(228, 228, 228);
+}
+
+.controlHistoryDIv img,
+.stopHistoryDIv img,
+.deleteHistoryDIv img{
+    height: 25px;
+    margin-right: 5px;
+}
+
+.infoHistoryDIv {
+    cursor: pointer;
+    display: flex;
+    justify-content: start;
+    margin-left: 45px;
+    width: 100%;
+
+    height: 37px;
+    font-weight: 1000;
+    color: rgb(84, 84, 84);
+}
