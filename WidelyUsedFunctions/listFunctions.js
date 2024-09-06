@@ -17,16 +17,12 @@ export function addToSubscribedYoutubers (nameOfYoutuber){
     }
     saveToStorageTheSubscribe()
     console.log('addToSubcribe')
-    console.log(SubscribedYoutubers)
-    console.log(SubscribedYoutuberVideoList)
 }
 
 export function RemoveToSubscribedYoutubers (nameOfYoutuber ,prewiousList){
     
     if (SubscribedYoutubers.includes(nameOfYoutuber)){
-        console.log(nameOfYoutuber)
         let index = SubscribedYoutubers.indexOf(nameOfYoutuber)
-        console.log(index)
          SubscribedYoutubers.splice(index , 1)
          
     }
@@ -37,14 +33,8 @@ export function RemoveToSubscribedYoutubers (nameOfYoutuber ,prewiousList){
     })*/
     
     console.log('RemoveSubcribe')
-    console.log(SubscribedYoutubers)
-    console.log(SubscribedYoutuberVideoList)
     saveToStorageTheSubscribe()
 }
-
-
-console.log(SubscribedYoutubers)
-console.log(SubscribedYoutuberVideoList)
 
 
 
@@ -53,18 +43,6 @@ export function SubscribedAddList(idOrName ,prewiousList){
 
     console.log('listCreatorThatIncludes working')
 
-   // if (SubscribedYoutubers.includes(idOrName) ){}
-    
-    /*else {
-        
-        prewiousList.forEach((listItem) => {
-
-
-            if (listItem.youtuberName === idOrName){
-                SubscribedYoutuberVideoList.push(listItem)
-            }
-        })
-    }*/
 
         SubscribedYoutuberVideoList = []
     allVideoData.forEach((VideoData) => {
@@ -75,7 +53,6 @@ export function SubscribedAddList(idOrName ,prewiousList){
         })  
       })
 
-      console.log(SubscribedYoutuberVideoList)
     saveToStorageTheSubscribe()
 
 

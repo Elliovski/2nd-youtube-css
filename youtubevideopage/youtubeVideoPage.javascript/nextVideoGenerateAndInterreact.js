@@ -2,6 +2,7 @@
 import { allVideoData } from "../../data/allVideoData.js";
 import { findWantedVideo, wantedVideo , saveToStorage} from "../../youtube2nd javascript/generateVideos.js";
 import { requestedVideo , renderVideoAndComment } from "./videoandCommentsGenerate.js";
+import { HistoryOfVideos,addToHistoryOfVideos } from "./recordHistory.js";
 
 
 
@@ -11,6 +12,8 @@ saveToStorage()
 
 export function nextVideoGeneraeAndInteract (){
     let nextVideoHtml = ``
+
+    //console.log(allVideoData)
 
     allVideoData.forEach((videoData) => {
         nextVideoHtml += `
@@ -41,17 +44,14 @@ export function nextVideoGeneraeAndInteract (){
     document.querySelectorAll('.one-NEXTviedo-div').forEach((oneVideo) => {
         oneVideo.addEventListener('click' , () => {
             
-            console.log('addEventListenerIsWorking')
     
-            console.log(wantedVideo)
             let nextVideo = findWantedVideo(oneVideo.id)
             renderVideoAndComment(nextVideo)
             
             
 
             saveToStorage()
-            console.log(wantedVideo)
-           findWantedVideo(oneVideo.id)
+           addToHistoryOfVideos(findWantedVideo(oneVideo.id))
     
         })}
     );

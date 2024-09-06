@@ -15,7 +15,15 @@ export function ClassAdder (RequestedClass , ClassAddedAndRemoved){
 }
 
 export function ClassRemover (RequestedClass , ClassAddedAndRemoved){
-        document.querySelector(RequestedClass).classList.remove(ClassAddedAndRemoved)
-    console.log(document.querySelector(RequestedClass).classList)
-    console.log("ClassAdderAndRemoverFunction working")
+    document.querySelector(RequestedClass).classList.remove(ClassAddedAndRemoved)
+console.log(document.querySelector(RequestedClass).classList)
+console.log("ClassAdderAndRemoverFunction working")
+}
+export function findAndDeleteFunction (allClass){
+    console.log('findAndDeleteFunction working')
+    document.querySelectorAll(allClass).forEach((Class) => {
+        Class.addEventListener('click', () => {
+            console.log(Class)
+        })
+    })
 }

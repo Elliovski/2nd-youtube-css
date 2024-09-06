@@ -6,11 +6,10 @@ export function findWantedVideo (wantedVideoId){
     let matchingVideo ;
     allVideoData.forEach((videoData) => {
         if( wantedVideoId === videoData.videoId){
-            //console.log(videoData.videoId)
+
             matchingVideo = videoData
         }
     })
-    console.log(matchingVideo)
     return matchingVideo;
 }
 
@@ -49,15 +48,9 @@ export function renderVideos(allVideoData){
     document.querySelectorAll('.one-video-div').forEach((oneVideo) => {
         oneVideo.addEventListener('click' , () => {
             
-            console.log('addEventListenerIsWorking')
-            
-            
             wantedVideo= {
                 id : String(oneVideo.id)
             }
-            
-            
-            console.log(wantedVideo)
             saveToStorage()
             findWantedVideo(wantedVideo.id)
             
