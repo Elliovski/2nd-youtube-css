@@ -1,6 +1,7 @@
 import { allVideoData } from "../../data/allVideoData.js";
 import { ClassAdderAndRemoverFunction } from "../../WidelyUsedFunctions/classFunctions.js";
-import {SubscribedAddList , addToSubscribedYoutubers, RemoveToSubscribedYoutubers  } from "../../WidelyUsedFunctions/listFunctions.js";
+import {SubscribedAddList , addToSubscribedYoutubers, RemoveToSubscribedYoutubers,  } from "../../WidelyUsedFunctions/listFunctions.js";
+import { LikedVideos , addToLikedVideos , RemoveFromLikedVideos } from "../../WidelyUsedFunctions/listFunctions.js";
 import { wantedVideo , findWantedVideo } from "../../youtube2nd javascript/generateVideos.js";
 
 export let requestedVideo = findWantedVideo(wantedVideo.id)
@@ -227,7 +228,7 @@ export function renderVideoAndComment (requestedVideo){
     `
 
     
-    document.querySelector('.vido-main').innerHTML = html;
+    document.querySelector('.vido-main').innerHTML = html
 
     function moreDetailsVisibility (){
         if (document.querySelector('.invisible-down').classList.contains('visible')){
@@ -247,7 +248,7 @@ export function renderVideoAndComment (requestedVideo){
     })
     document.querySelector('.SUBSCRIBE-button').addEventListener('click' , () => {
 
-        ClassAdderAndRemoverFunction('.SUBSCRIBE-button' , 'ActiveSubscribeButton' , 'youtuberName')
+        ClassAdderAndRemoverFunction('.SUBSCRIBE-button' , 'ActiveSubscribeButton' ,)
         
         if (document.querySelector('.SUBSCRIBE-button').classList.contains('ActiveSubscribeButton')){
             document.querySelector('.SUBSCRIBE-button').innerHTML = 'Subscribed'
@@ -264,10 +265,30 @@ export function renderVideoAndComment (requestedVideo){
 
 
         }
-
-
     })
+
+
     
+    document.querySelector('.like').addEventListener('click' , () => {
+
+        
+        if (document.querySelector('.like').classList.contains('ActiveLikeButton')){
+            ClassAdderAndRemoverFunction('.like' , 'ActiveLikeButton' ,)
+            RemoveFromLikedVideos(requestedVideo )
+            
+            console.log(LikedVideos)
+            
+        }
+        else {
+            ClassAdderAndRemoverFunction('.like' , 'ActiveLikeButton' ,)
+            addToLikedVideos(requestedVideo)
+            
+            console.log(LikedVideos)
+            
+            
+        }
+        
+    })
 }
 
 

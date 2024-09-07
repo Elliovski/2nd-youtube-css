@@ -3,10 +3,18 @@ import { allVideoData } from "../data/allVideoData.js"
 export let SubscribedYoutubers = JSON.parse(localStorage.getItem("SubscribedYoutubers")) || []
 export let SubscribedYoutuberVideoList = JSON.parse(localStorage.getItem('SubscribedYoutuberVideoList')) ||[]
 
+export let LikedVideos = JSON.parse(localStorage.getItem("LikedVideos")) || []
+export let LikedVideosId = JSON.parse(localStorage.getItem("LikedVideosId")) || []
+
 
 export function saveToStorageTheSubscribe (){
     localStorage.setItem('SubscribedYoutubers',JSON.stringify(SubscribedYoutubers))
     localStorage.setItem('SubscribedYoutuberVideoList',JSON.stringify(SubscribedYoutuberVideoList))
+}
+
+export function saveToStorageTheLikedVideos (){
+    localStorage.setItem('LikedVideos',JSON.stringify(LikedVideos))
+    localStorage.setItem('LikedVideosId',JSON.stringify(LikedVideosId))
 }
 
 export function addToSubscribedYoutubers (nameOfYoutuber){
@@ -70,3 +78,30 @@ export function organizeSubscribedVideos (){
       })  
     })
 }
+//////////////
+
+
+export function addToLikedVideos (Video){
+    
+    if (LikedVideos.includes(Video)){}
+    else {LikedVideos.push(Video)}
+
+    console.log(LikedVideos)
+    console.log('addToLikedVideos')
+    saveToStorageTheLikedVideos()
+}
+
+export function RemoveFromLikedVideos (Video){
+    
+    let index = LikedVideos.indexOf(Video)
+
+    LikedVideos.splice(index, 1)
+        
+    console.log(LikedVideos)
+    console.log('RemoveLikedVideo')
+    saveToStorageTheLikedVideos()
+}
+
+
+
+

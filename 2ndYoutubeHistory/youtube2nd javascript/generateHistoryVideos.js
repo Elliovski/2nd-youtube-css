@@ -38,6 +38,7 @@ export function generateHistoryVideosFunction (){
         //HistoryOfVideos = [0] can not work because it creates a new array and HistoryOfVideos is saved to storage from somewhere else 
         HistoryOfVideos.length = 0
         console.log(HistoryOfVideos)
+        generateHistoryVideosFunction()
         saveToStorageTheHistory()
     
     })
@@ -110,10 +111,18 @@ export function generateHistoryVideosFunction (){
                 if (document.querySelector('.stopHistoryDIv').classList.contains("stoppedHistory") || stoppedHistory == true){
                     document.querySelector('.stopHistoryDIv').classList.remove("stoppedHistory")
                     stoppedHistory = false    
+                    document.querySelector('.stopHistoryDIv').innerHTML =
+                    `
+                     <img src="icons - Copy/pause icon.webp" alt=""></img>
+                    <p>Baxis tarixcesini qeydiyatina fasile verin </p>`
                 }
                 else {
                     document.querySelector('.stopHistoryDIv').classList.add("stoppedHistory")
                     stoppedHistory = true
+                    document.querySelector('.stopHistoryDIv').innerHTML =
+                    `
+                    <img src="icons - Copy/pause icon.webp" alt=""></img>
+                    <p>Baxis tarixcesini qeydiyatina davam verin </p>`
                 }
                 console.log(document.querySelector('.stopHistoryDIv').classList)
                 console.log(stoppedHistory)
@@ -121,9 +130,9 @@ export function generateHistoryVideosFunction (){
                 console.log("ClassAdderAndRemoverFunction working")
             })
 
-            findAndDeleteFunction('.xIcon')
-
             
+
+            findAndDeleteFunction('.xIcon')           
 
             
     
