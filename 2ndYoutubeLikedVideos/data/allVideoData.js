@@ -2,7 +2,7 @@
 export  let allVideoData = [
     {
     videoId : '122222222224322WTLZT313' ,
-    videoImage : 'thumbnails - Copy/thumbnail-1.webp',
+    videoImage : 'thumbnails - Copy/thumbnail-1.webp', 
     profilePic : 'profile pics - Copy/channel-1.jpeg',
     videoTitle : "Google CEO",
     youtuberName : 'Mark tech',

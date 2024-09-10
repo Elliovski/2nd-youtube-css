@@ -28,23 +28,30 @@ export function renderVideos(allVideoData){
     let html = ``
 
     allVideoData.forEach((videoData) => {
-        html += `<a class="one-video-div js-one-video-div-${videoData.videoId}" id = "${videoData.videoId}"  href="/youtubevideopage/youtubevideopage.html"  target="_blank" >
-                    <DIv class="the-video-div">                                                                     
-                        <img src="${videoData.videoImage}" alt="" class="the-video">
-        
-                    </DIv>
-                    <DIv class="all-else-div">
-                        <Div class="profilepicdiv"><img src="${videoData.profilePic}" alt="" class="profilepic"></Div>
-                        <Div class="video-stats-div">
-                            <div class="title ">${videoData.videoTitle}</div>
-                            <div class="youtuber-name ">${videoData.youtuberName}</div>
-                            <div class="watch ">${videoData.watchData}</div>
-                        </Div>
-        
+        html += `<a class="one-Liked-Video" href="/youtubevideopage/youtubevideopage.html" target="_blank">
+                    <Div class="the-index-LikedVideo-Div">
+                        ${allVideoData.indexOf(videoData) +1}
                     </Div>
-        </a>`
+                    <Div class="TheLikedVideo-and-theButton">
+                        <Div class="theLikedVideo-and-theInformation">
+                            <Div class="theLikedVideo">
+                                <img src="${videoData.videoImage}" alt="">
+                            </Div>
+                                <Div class="theInformation-All">
+                                    <div class="informationUp">${videoData.videoTitle}</div>
+                                    <div class="informationDown">${videoData.youtuberName} &#x2022 ${videoData.watchData}</div>
+                                </Div>
+                        </Div>
+                        <Div class="control-TheLikedVideo-Button-Div">
+                            <div class="control-TheLikedVideo-Button">
+                                <img src="icons - Copy/3 Dots.png" alt="">
+
+                            </div>
+                        </Div>
+                    </Div>
+                </a>`
     });
-    document.querySelector('.main').innerHTML = html
+    document.querySelector('.All-Liked-Videos').innerHTML = html
 
     document.querySelectorAll('.one-video-div').forEach((oneVideo) => {
         oneVideo.addEventListener('click' , () => {

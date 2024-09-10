@@ -1,41 +1,239 @@
-.main {
-    display: grid ; 
-    grid-template-columns: 1fr 1fr 1fr  1fr; 
-    column-gap: 11px;
-    row-gap: 40px;    
-}
-p {
+
+.LikedVideosPlaylist-DIV0{
     
 }
-.one-video-div  {
-     cursor: pointer;
-     text-decoration: none;
+
+.LikedVideosPlaylist-DIV1 {
+    border-radius: 15px;
+    position: fixed;
+    bottom: 50px;
+    top: 80px;
+
+
+    background-image:linear-gradient(rgba(101, 92, 15, 0.8) 0%, rgba(101, 92, 15, 0.298) 33%, rgba(101, 92, 15, 0.8) 100%);
+    display: flex;
+    justify-content: center;
+    
+    width: 360px;
+    
+    
+
 }
-.one-video-div div{
+
+.LikedVideosPlaylist-DIV2{
+
+    margin-top: 25px;
+    width: 312px;
+    height: 590px;
+}
+
+.PlayAll-img-DIv img{
+    width: 312px;
+    height: 175px;
+    border-radius: 10px;
+}
+.Playlist-Everything-Else{
+    display: grid;
+    grid-gap: 10px;
+}
+.likedVideos-p-Div{
+
+    font-size: 28px;
+    font-weight: 700px;
+}
+.Playlist-Information-Donwload-Button-Div{
+    margin-top: 20px;
+    
+}
+.acoountOfLikedVideos-div{
+    font-size: 14px;
+    font-weight: 500px;
+    color: white;
+}
+.likedVideos-watchDate{
+    font-size: 12px;
+    font-weight: 400px;
+    color: rgba(255, 255, 255, 0.7);
+    margin-top: 5px;
+    margin-bottom: 15px;
+}
+.likedVideos-download-button-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: aliceblue;
+    border-radius: 18px;
+}
+.likedVideos-download-button-div:hover{
+    background-color: rgb(210, 210, 210);
+}
+.likedVideos-download-button-div img{
+    width: 15px;
+    height: 15px;
+}
+.likedVideos-download-button-div button{
+    border: none;
+    background:none;
+}
+
+.Start-And-Mix-Button-Div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.playAll-button{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 152px;
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+}
+.playAll-button:hover {
+    background-color: rgb(216, 211, 211);
+}
+.playAll-button img {
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 18px;
+    width: 18px;
+}
+.Mix-button{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    width: 152px;
+    height: 36px;
+    border-radius: 18px;
+    border: none;
+    background-color:rgba(226, 222, 222, 0.192); 
+    color: white;
+}
+.Mix-button:hover {
+    background-color: rgba(226, 222, 222, 0.371);
+}
+.Mix-button img{
+    margin-left: 10px;
+    margin-right: 5px;
+    height: 18px;
+    width: 18px;
+}
+
+
+
+.main {
+    width: 100%;  
+}
+.All-Liked-Videos {
+    display: grid;
+    margin-left: 5px;
+    width: 100%;
+}
+.one-Liked-Video{
+    text-decoration: none;
+    display: grid;
+    grid-auto-flow: row;
+    grid-template-columns: 20px 1fr;
+
+    padding: 10px 0px 10px 10px;
+
+    border-radius: 13px;
+}
+.one-Liked-Video:hover{
+    background-color: rgb(235, 234, 234);
+
+}
+
+.the-index-LikedVideo-Div {
+    display: flex;
+    align-items: center;
+    
+}
+
+.TheLikedVideo-and-theButton {
+    display: flex;
+    align-items: center;
+    
+    justify-content: space-between;
+}
+
+.theLikedVideo-and-theInformation{
+    display: flex;
+    flex-direction: row;
+}
+
+.theLikedVideo img{
+    width: 160px;
+    height: 90px;
+}
+
+.theInformation-All{
+    margin-left: 5px;
+}
+
+.informationUp{
+    font-size: 16px;
+    font-weight: 500px;
+    font-family: Arial, Helvetica, sans-serif;
     color: black;
 }
-.tthumnls {
-    position: relative;
 
-}
-.the-video {
-    width: 100% ;
+.informationDown{
+    margin-top: 10px;
 
-}
-.all-else-div {
-    display: grid;
-    grid-template-columns: 50px 1fr;
-    
-}
-.video-stats-div{
+    font-family: Roboto , Arial,  sans-serif;
+    color: rgb(96, 96, 96);
+    font-size: 12px;
+    font-weight: 400px;
+    line-height: 18px;
 
 }
 
-
-.profilepicdiv {
-    
-}
-.profilepic {
-    border-radius: 20px;
+.control-TheLikedVideo-Button-Div{
     width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+
+}
+.control-TheLikedVideo-Button-Div:active {
+
+    background-color: rgb(167, 167, 167);
+}
+.control-TheLikedVideo-Button img{
+    width: 5px;
+    height: 17px;
+}
+
+@media (max-height : 550px) {
+    .PlayAll-img-DIv img{
+        width: 0px;
+        height: 0px;
+    }
+    
+}
+@media (max-height: 375px) {
+    .Playlist-Information-Donwload-Button-Div{
+        height: 0px;
+        width: 0px;
+        font: none;
+    }
+    .acoountOfLikedVideos-div{
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+    }
+    .likedVideos-watchDate{
+        height: 0px;
+        width: 0px;
+        visibility: hidden;
+    }
+    
 }
