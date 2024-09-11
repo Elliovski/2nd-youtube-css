@@ -9,7 +9,7 @@ export function findWantedVideo (wantedVideoId){
 
             matchingVideo = videoData
         }
-    })
+    })  
     return matchingVideo;
 }
 

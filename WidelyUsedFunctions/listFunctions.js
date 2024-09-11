@@ -17,6 +17,26 @@ export function saveToStorageTheLikedVideos (){
     localStorage.setItem('LikedVideosId',JSON.stringify(LikedVideosId))
 }
 
+
+export function shuffleTheListFunction (theList){
+    for (let i = theList.length - 1; i > 0; i--) { 
+        const j = Math.floor(Math.random() * (i + 1)); 
+        [theList[i], theList[j]] = [theList[j], theList[i]]; 
+      } 
+      return theList; 
+}
+
+
+export function deleteSimilarId (videoId , theList){
+    theList.forEach((Video) => {
+        if (videoId === Video.videoId){
+            let index = theList.indexOf(Video)
+
+            theList.splice( index , 1)
+        }
+    })
+}
+
 export function addToSubscribedYoutubers (nameOfYoutuber){
     
     if (SubscribedYoutubers.includes(nameOfYoutuber)){}
@@ -82,26 +102,24 @@ export function organizeSubscribedVideos (){
 
 
 export function addToLikedVideos (Video){
-    
-    if (LikedVideos.includes(Video)){}
-    else {LikedVideos.push(Video)}
+    deleteSimilarId(Video.videoId , LikedVideos)
 
+    LikedVideos.unshift(Video)
+
+    console.log("LikedVideos")
     console.log(LikedVideos)
-    console.log('addToLikedVideos')
     saveToStorageTheLikedVideos()
 }
 
 export function RemoveFromLikedVideos (Video){
-    
-    let index = LikedVideos.indexOf(Video)
-
-    LikedVideos.splice(index, 1)
-        
-    console.log(LikedVideos)
-    console.log('RemoveLikedVideo')
+    deleteSimilarId(Video.videoId , LikedVideos)
     saveToStorageTheLikedVideos()
 }
 
+function deleteLikedVideos (){
+    LikedVideos.length = 0
+}
 
+//deleteLikedVideos()
 
 

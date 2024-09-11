@@ -8,6 +8,235 @@
     margin-left: 20px;
 
 }
+.playlist-DIV {
+    border: solid;
+    border-width: 1px;    
+    border-color: rgb(206, 206, 206);
+    border-radius: 10px;
+}
+.playlist-Buttons-DIv{
+    display: flex;
+    justify-content: space-between;
+
+    padding: 12px 6px 0px  16px;
+    
+    
+}
+.left-Buttons{}
+
+.informationOfThePlaylist-Div p{
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.shuffleAndRepeatButton-DIv{
+    display: flex;
+    align-items: center;
+    
+    
+}
+.shuffleAndRepeatButton-DIv img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+}
+.shuffleButton-Div,
+.repeatButton-Div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    margin-right: 10px;
+    width: 36px;
+    height: 36px;
+
+    border-radius: 18.5px;
+
+}
+.shuffleButton-Div button,
+.repeatButton-Div button{
+    background: none;
+    border: none;
+}
+
+.shuffleButton-Div:hover,
+.repeatButton-Div:hover{
+
+    background-color: rgb(213, 213, 213);
+}
+
+.Name-of-the-playlist p{
+    margin: 0px;
+}
+
+.right-Buttons{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Close-button {
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.control-Button {
+    
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.Close-button  img{
+    width: 30px;
+    height: 30px;
+}
+
+.control-Button img{
+    width: 7px;
+    height: 20px;
+}
+
+.Close-button button {
+    background: none;
+    border: none;
+}
+
+.control-Button button {
+    background: none;
+    border: none;
+}
+.Close-button:active ,
+.control-Button:active{
+    background-color: gainsboro;
+}
+
+.playlist-Videos-DIv {}
+
+.All-playlist-Videos{
+    display: grid;
+    overflow: hidden;
+    
+}
+
+.one-playlist-Video{
+    display: flex;
+    align-items: center;
+    
+    width: max-content;
+    
+    width: 100%;
+    
+}
+.one-playlist-Video:hover {
+    background-color: rgb(234, 233, 233);
+
+    border-width: 1px;
+    border-color: rgb(204, 203, 203);
+    box-shadow: -0px 2px 7px 0.1px rgb(102, 102, 102) ;
+    overflow: hidden;
+    
+}
+
+.the-index-playlistVideo-Div{
+    margin-right: 9px;
+    margin-left: 9px;
+}
+
+.TheplaylistVideo-and-theButton{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    width: 100%;
+    
+}
+
+.theplaylistVideo-and-theInformation{
+    display: flex;
+}
+
+.theplaylistVideo{
+    display: flex;
+    align-items: center;
+}
+
+.theplaylistVideo img{
+    width: 100px;
+    height: 56px;
+    border-radius: 10px;
+    margin: 10px 0px 10px 0px;
+}
+
+.theInformation-All{
+    margin-left: 10px;
+}
+
+.informationUp{}
+
+.informationDown{
+    color: rgb(98, 98, 98);
+    font-size: 12px;
+    font-weight: 400px;
+    margin-top: 10px;
+}
+
+.control-TheplaylistVideo-Button-Div{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+
+}
+
+.control-TheplaylistVideo-Button button{
+
+    height: 40px;
+    width: 40px;
+    background: none;
+
+    border: none;
+    border-radius: 20px;
+    visibility: hidden;
+}
+.control-TheplaylistVideo-Button:active button{
+    background-color: gray;
+}
+
+.one-playlist-Video:hover button{
+
+    visibility: visible;
+}
+
+
+.control-TheplaylistVideo-Button img{
+    width: 7px;
+    height: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .Suggestions-nextvideos {
     display: flex;
     align-items: center;
